@@ -593,6 +593,13 @@ local servers = {
 
   pyright = {
     filetypes = {'python'},
+    python = {
+      analysis = {
+        autoSearchPaths = true,
+        useLibraryCodeForTypes = true,
+        diagnosticMode = 'openFilesOnly',
+      },
+    },
   },
   -- rust_analyzer = {},
   -- tsserver = {},
