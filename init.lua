@@ -558,6 +558,14 @@ require('lazy').setup({
           filetypes = { 'python' },
           root_dir = util.root_pattern('poetry.lock', 'requirements.txt', '.git'),
         },
+        ['helm-ls'] = {
+          logLevel = 'info',
+          valuesFiles = {
+            mainValuesFile = 'values.yaml',
+            lintOverlayValuesFile = 'values.lint.yaml',
+            additionalValuesFilesGlobPattern = 'values*.yaml',
+          },
+        },
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
